@@ -1,34 +1,32 @@
-const colorData: any[] = [
+[
 	{
-		id: "0123d1f0-a8c6-41bf-8d02-df573d923a4",
-		title: "ocean at dusk",
-		color: "#00c4e2",
-		rating: 5,
+		"id": "0123d1f0-a8c6-41bf-8d02-df573d923a4",
+		"title": "ocean at dusk",
+		"color": "#00c4e2",
+		"rating": 5
 	},
 	{
-		id: "0123d1f0-a8c6-41bf-8d02-1pasdkfj48s",
-		title: "lawn",
-		color: "#26ac56",
-		rating: 3,
+		"id": "0123d1f0-a8c6-41bf-8d02-1pasdkfj48s",
+		"title": "lawn",
+		"color": "#26ac56",
+		"rating": 3
 	},
 	{
-		id: "0123d1f0-a8c6-41bf-8d02-jhdp27346s",
-		title: "bright red",
-		color: "#ff0000",
-		rating: 0,
+		"id": "0123d1f0-a8c6-41bf-8d02-jhdp27346s",
+		"title": "bright red",
+		"color": "#ff0000",
+		"rating": 0
 	},
 	{
-		id: "0123d1f0-a8c6-41bf-8d02-asdhf2p45",
-		title: "pink lavender",
-		color: "#ebb9df",
-		rating: 5,
+		"id": "0123d1f0-a8c6-41bf-8d02-asdhf2p45",
+		"title": "pink lavender",
+		"color": "#ebb9df",
+		"rating": 5
 	},
 	{
-		id: "0123d1f0-a8c6-41bf-8d02-abisubdbv52",
-		title: "sage green",
-		color: "#60992d",
-		rating: 4,
-	},
-];
-
-export default colorData;
+		"id": "0123d1f0-a8c6-41bf-8d02-abisubdbv52",
+		"title": "sage green",
+		"color": "#60992d",
+		"rating": 4
+	}
+]

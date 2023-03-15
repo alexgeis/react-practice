@@ -1,7 +1,11 @@
 import Color from "./Color";
 
-export default function ColorList({ colors = [] }: any) {
-	if (!colors.length) return <div>No Colors Listed.</div>;
+export default function ColorList({
+	colors = [],
+	onRemoveColor = (f: any) => f,
+	onRateColor = (f: any) => f,
+}: any) {
+	if (!colors.length) return <div>No Colors Listed. (Add a Color)</div>;
 
 	return (
 		<div>
@@ -10,6 +14,8 @@ export default function ColorList({ colors = [] }: any) {
 					<Color
 						key={color.id}
 						{...color}
+						onRemove={onRemoveColor}
+						onRate={onRateColor}
 					/>
 				);
 			})}
