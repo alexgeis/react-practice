@@ -54,7 +54,7 @@ const ToDoList = () => {
 		setList(updatedToDo);
 	};
 
-	if (!list.length) return <div>No current to-do items. (Add a to-do)</div>;
+	// if (!list.length) return <div>No current to-do items. (Add a to-do)</div>;
 
 	return (
 		<div style={styles.container}>

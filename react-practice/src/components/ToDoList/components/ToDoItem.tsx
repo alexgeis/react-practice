@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ToDoForm from "./ToDoForm";
 
 const ToDoItem = ({
@@ -48,7 +48,7 @@ const ToDoItem = ({
 
 	const submitUpdate = (value: any) => {
 		editToDo(edit.id, value);
-		setEdit({ id: null, value: "", eagerness: "" });
+		setEdit({ id: null, text: "", importance: "" });
 	};
 
 	if (edit.id) {
