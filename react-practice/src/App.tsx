@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import { useLocalStorage } from "./hooks/useLocalStorage";
+
 import CountdownTimer from "./components/CountdownTimer/CountdownTimer";
 import NavBar from "./components/NavBar/NavBar";
 import QuizForm from "./components/QuizForm/QuizForm";
@@ -34,16 +36,8 @@ const NavComponents: any = [
 ];
 
 function App() {
-	const [navItems, setNavItems] = useState(NavComponents);
-	const [activeIndex, setActiveIndex] = useState<number>(() => {
-		// getting stored value
-		const savedIndexInit: number = Number(localStorage.getItem("navIndex"));
-		return savedIndexInit || 0;
-	});
-
-	useEffect(() => {
-		localStorage.setItem("navIndex", JSON.stringify(activeIndex));
-	}, [activeIndex]);
+	const [navItems] = useState(NavComponents);
+	const [activeIndex, setActiveIndex] = useLocalStorage("navIndex", 0);
 
 	return (
 		<main className="App">
