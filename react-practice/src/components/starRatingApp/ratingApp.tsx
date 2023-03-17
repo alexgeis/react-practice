@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ColorList from "./ColorList";
-import colorData from "./dataSet.json";
+import ColorList from "./components/ColorList";
+import colorData from "./data/dataSet.json";
 
 export default function RatingApp() {
 	const [colors, setColors] = useState(colorData);
