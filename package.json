@@ -1,0 +1,21 @@
+{
+	"name": "react-practice",
+	"version": "1.0.0",
+	"description": "to create:",
+	"main": "./react-practice/src/main.tsx",
+	"scripts": {
+		"start": "cd react-practice && npm run dev",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/alexgeis/react-practice.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/alexgeis/react-practice/issues"
+	},
+	"homepage": "https://github.com/alexgeis/react-practice#readme"
+}

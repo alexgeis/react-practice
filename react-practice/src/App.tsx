@@ -1,20 +1,12 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { useLocalStorage } from "./hooks/useLocalStorage";
-
-import CountdownTimer from "./components/CountdownTimer/CountdownTimer";
 import NavBar from "./components/NavBar/NavBar";
+// COMPONENTS
+import CountdownTimer from "./components/CountdownTimer/CountdownTimer";
 import QuizForm from "./components/QuizForm/QuizForm";
 import RatingApp from "./components/starRatingApp/RatingApp";
 import ToDoApp from "./components/ToDoList/ToDoApp";
-
-/* 
-	nav bar for different pages
-
-	render grid of available pages
-
-	if clicked, the grid will get the index and render that page
-*/
 
 const NavComponents: any = [
 	{
