@@ -18,7 +18,10 @@ export function Slide({
 }: SlideProps): JSX.Element {
 	return (
 		<>
-			<div id={id}>
+			<div
+				id={id}
+				style={isCurrent ? { display: "" } : { display: "none" }}
+			>
 				<img
 					src={image.src}
 					alt={image.alt}

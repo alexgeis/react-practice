@@ -1,28 +1,28 @@
 export const imgData: ImgProps[] = [
 	{
 		imgInfo: {
-			src: "http://placekitten.com/200/300",
+			src: "https://baconmockup.com/700/300",
 			alt: "Lorem ipsum dolor sit amet.",
 		},
-		title: "title",
+		title: "title 1",
 		content:
 			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quod.",
 	},
 	{
 		imgInfo: {
-			src: "http://placekitten.com/200/301",
+			src: "https://baconmockup.com/700/301",
 			alt: "Lorem ipsum dolor sit amet.",
 		},
-		title: "title",
+		title: "title 2",
 		content:
 			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quod.",
 	},
 	{
 		imgInfo: {
-			src: "http://placekitten.com/201/300",
+			src: "https://baconmockup.com/701/301",
 			alt: "Lorem ipsum dolor sit amet.",
 		},
-		title: "title",
+		title: "title 3",
 		content:
 			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, quod.",
 	},

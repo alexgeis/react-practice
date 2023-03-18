@@ -7,6 +7,7 @@ import CountdownTimer from "./components/CountdownTimer/CountdownTimer";
 import ColorRating from "./components/ColorRating/ColorRating";
 import QuizForm from "./components/QuizForm/QuizForm";
 import Accordion from "./components/Accordion/Accordion";
+import Carousel from "./components/Carousel/Carousel";
 
 import ToDoApp from "./components/ToDoList/ToDoApp";
 
@@ -30,6 +31,10 @@ const NavComponents: any = [
 	{
 		element: <Accordion />,
 		title: "Accordion",
+	},
+	{
+		element: <Carousel />,
+		title: "Carousel",
 	},
 ];
 
