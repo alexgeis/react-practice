@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { FaBackward, FaForward, FaPause, FaPlay } from "react-icons/fa";
 import CarouselWrapper from "./components/CarouselWrapper";
-import Controls from "./components/Controls";
+import { Controls, IconButton } from "./components/Controls";
 import ProgressBar from "./components/ProgressBar";
 import { SlideNavItem, SlideNav } from "./components/SlideNav";
 import { Slide, Slides } from "./components/Slides";
@@ -35,7 +36,40 @@ export default function Carousel() {
 					/>
 				))}
 			</SlideNav>
-			<Controls></Controls>
+			<Controls>
+				{/* PLAY / PAUSE */}
+				{false ? (
+					<IconButton
+						aria-label="Pause"
+						onClick={() => {}}
+						children={<FaPause />}
+					/>
+				) : (
+					<IconButton
+						aria-label="Play"
+						onClick={() => {}}
+						children={<FaPlay />}
+					/>
+				)}
+				{/* BACKWARD */}
+				<IconButton
+					aria-label="Previous Slide"
+					onClick={() => {
+						setCurrentIndex(
+							(currentIndex - 1 + imgData.length) % imgData.length
+						);
+					}}
+					children={<FaBackward />}
+				/>
+				{/* FORWARD */}
+				<IconButton
+					aria-label="Next Slide"
+					onClick={() => {
+						setCurrentIndex((currentIndex + 1) % imgData.length);
+					}}
+					children={<FaForward />}
+				/>
+			</Controls>
 			<ProgressBar></ProgressBar>
 		</CarouselWrapper>
 	);
