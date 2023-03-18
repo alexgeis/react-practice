@@ -1,5 +1,9 @@
-import React from "react";
+import { ReactNode } from "react";
 
-export default function SlideNav() {
-	return <div>SlideNav</div>;
+export function SlideNav({ children }: { children: ReactNode }): JSX.Element {
+	return (
+		<div style={{ position: "absolute", display: "flex", gap: "10px" }}>
+			{children}
+		</div>
+	);
 }
