@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar/NavBar";
 import CountdownTimer from "./components/CountdownTimer/CountdownTimer";
 import ColorRating from "./components/ColorRating/ColorRating";
 import QuizForm from "./components/QuizForm/QuizForm";
-// import Accordion from "./components/Accordion/Accordion";
+import Accordion from "./components/Accordion/Accordion";
 
 import ToDoApp from "./components/ToDoList/ToDoApp";
 
@@ -26,6 +26,10 @@ const NavComponents: any = [
 	{
 		element: <ColorRating />,
 		title: "Color Rating App",
+	},
+	{
+		element: <Accordion />,
+		title: "Accordion",
 	},
 ];
 

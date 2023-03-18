@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useMediaQuery } from "./hooks/useMediaQuery";
 
 type PanelProps = {
 	title: string;
@@ -7,10 +8,22 @@ type PanelProps = {
 	onShow: () => void;
 };
 
-export default function Accordion() {
-	const [activeIndex, setActiveIndex] = useState(0);
+export default function Accordion(): JSX.Element {
+	const [activeIndex, setActiveIndex] = useState<number>(0);
+
+	const width1000: boolean = useMediaQuery("(max-width: 1000px)");
+	const width767: boolean = useMediaQuery("(max-width: 767px)");
+
 	return (
-		<>
+		<section
+			style={
+				width767
+					? accordionStyle.container("315px")
+					: width1000
+					? accordionStyle.container("666px")
+					: accordionStyle.container("900px") // width for screens > 1000px
+			}
+		>
 			<h2>Almaty, Kazakhstan</h2>
 			<Panel
 				title="About"
@@ -31,15 +44,34 @@ export default function Accordion() {
 				the wild <i lang="la">Malus sieversii</i> is considered a likely
 				candidate for the ancestor of the modern domestic apple.
 			</Panel>
-		</>
+		</section>
 	);
 }
 
-function Panel({ title, children, isActive, onShow }: PanelProps) {
+const accordionStyle = {
+	container: (width: string): any => ({
+		width: width,
+		margin: "0 auto",
+		backgroundColor: "#9c1ce6",
+		WebkitBoxShadow: "-8px 10px 5px 0px rgba(255,255,255,1)",
+		MozBoxShadow: "-8px 10px 5px 0px rgba(255,255,255,1)",
+		boxShadow: "-8px 10px 5px 0px rgba(255,255,255,1)",
+	}),
+};
+
+function Panel({ title, children, isActive, onShow }: PanelProps): JSX.Element {
 	return (
-		<section className="panel">
+		<section style={panelStyle.container}>
 			<h3>{title}</h3>
 			{isActive ? <p>{children}</p> : <button onClick={onShow}>Show</button>}
 		</section>
 	);
 }
+
+const panelStyle = {
+	container: {
+		border: "1px white solid",
+		padding: "20px 4px",
+		// backgroundColor: "#9c1ce6",
+	},
+};
