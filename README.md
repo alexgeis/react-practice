@@ -2,7 +2,7 @@
 
 to create:
 
-- [ ] accordion
+- [x] accordion
 - [ ] carousel
 - [ ] show / hide examples
 - [ ] form (states: typing, submitting, complete)
