@@ -4,8 +4,10 @@ import { useLocalStorage } from "./hooks/useLocalStorage";
 import NavBar from "./components/NavBar/NavBar";
 // COMPONENTS
 import CountdownTimer from "./components/CountdownTimer/CountdownTimer";
+import ColorRating from "./components/ColorRating/ColorRating";
 import QuizForm from "./components/QuizForm/QuizForm";
-import RatingApp from "./components/starRatingApp/RatingApp";
+// import Accordion from "./components/Accordion/Accordion";
+
 import ToDoApp from "./components/ToDoList/ToDoApp";
 
 const NavComponents: any = [
@@ -22,7 +24,7 @@ const NavComponents: any = [
 		title: "Quiz Form",
 	},
 	{
-		element: <RatingApp />,
+		element: <ColorRating />,
 		title: "Color Rating App",
 	},
 ];
