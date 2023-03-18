@@ -18,11 +18,16 @@ export function Slide({
 }: SlideProps): JSX.Element {
 	return (
 		<>
-			<div>
+			<div id={id}>
 				<img
 					src={image.src}
 					alt={image.alt}
 				/>
+
+				<div className="content">
+					<p>{title}</p>
+					<p>{children}</p>
+				</div>
 			</div>
 		</>
 	);
